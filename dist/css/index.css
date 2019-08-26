@@ -64,9 +64,28 @@ nav {
   grid-area: nav;
   background-color: #272727;
   display: flex;
+  justify-content: space-between;
   border-bottom: solid #474747 1px;
 }
-nav a {
+nav .login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ededed;
+  background-color: #474747;
+  text-align: center;
+  height: 30px -1;
+  width: 150px;
+  font-size: 1.5rem;
+}
+nav .login i {
+  margin-right: 5px;
+}
+nav .links {
+  display: flex;
+}
+nav .links a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,19 +97,19 @@ nav a {
   width: 150px;
   font-size: 1.2rem;
 }
-nav a .tab-icon {
+nav .links a .tab-icon {
   margin-right: 5px;
 }
-nav a .fa-home {
+nav .links a .fa-home {
   color: #e7582b;
 }
-nav a .fa-users {
+nav .links a .fa-users {
   color: #4caef6;
 }
-nav a .fa-bug {
+nav .links a .fa-bug {
   color: #ffd12d;
 }
-nav .selected {
+nav .links .selected {
   background: #202020;
   border-bottom: solid #0ca3fc 2px;
   height: 28px;

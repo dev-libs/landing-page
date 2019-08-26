@@ -6,39 +6,60 @@ nav {
   grid-area: nav;
   background-color: @base-nav-color;
   display: flex;
+  justify-content: space-between;
   border-bottom: solid lighten(@base-nav-color, 12.5%) 1px;
 
-  a {
+  .login {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: @base-font-color;
-    background-color: @base-nav-tab-color;
+    background-color: lighten(@base-nav-tab-color, 10%);
     text-align: center;
     height: @nav-height -1;
     width: 150px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 
-    .tab-icon {
+    i {
       margin-right: 5px;
     }
-
-    .fa-home {
-      color: @home-icon-color;
-    }
-
-    .fa-users {
-      color: @project-icon-color;
-    }
-
-    .fa-bug {
-      color: @bugs-icon-color;
-    }
   }
-  .selected {
-    background: darken(@base-nav-tab-color, 5%);
-    border-bottom: solid lighten(@accent-primary, 10%) 2px;
-    height: @nav-height - 2px;
+
+  .links {
+    display: flex;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: @base-font-color;
+      background-color: @base-nav-tab-color;
+      text-align: center;
+      height: @nav-height -1;
+      width: 150px;
+      font-size: 1.2rem;
+
+      .tab-icon {
+        margin-right: 5px;
+      }
+
+      .fa-home {
+        color: @home-icon-color;
+      }
+
+      .fa-users {
+        color: @project-icon-color;
+      }
+
+      .fa-bug {
+        color: @bugs-icon-color;
+      }
+    }
+    .selected {
+      background: darken(@base-nav-tab-color, 5%);
+      border-bottom: solid lighten(@accent-primary, 10%) 2px;
+      height: @nav-height - 2px;
+    }
   }
 }
