@@ -4,6 +4,8 @@ body {
   padding: 0;
   color: white;
   box-sizing: border-box;
+  src: url('fonts/FiraCode.woff') format('woff');
+  font-family: 'Fira Code', monospace;
 }
 #page {
   display: grid;
