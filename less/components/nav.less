@@ -6,14 +6,35 @@ nav {
   grid-area: nav;
   background-color: @base-nav-color;
   display: flex;
+  border-bottom: solid lighten(@base-nav-color, 12.5%) 1px;
+
   a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: @base-font-color;
     background-color: @base-nav-tab-color;
     text-align: center;
-    height: @nav-height;
+    height: @nav-height -1;
     width: 150px;
-    line-height: @nav-height;
+    font-size: 1.2rem;
+
+    .tab-icon {
+      margin-right: 5px;
+    }
+
+    .fa-home {
+      color: @home-icon-color;
+    }
+
+    .fa-users {
+      color: @project-icon-color;
+    }
+
+    .fa-bug {
+      color: @bugs-icon-color;
+    }
   }
   .selected {
     background: darken(@base-nav-tab-color, 5%);
