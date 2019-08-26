@@ -1,0 +1,94 @@
+// out: ../css/index.css
+@import 'vars';
+@import 'mixins';
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: @base-font-color;
+  box-sizing: border-box;
+  src: url('fonts/FiraCode.woff') format('woff');
+  font-family: 'Fira Code', monospace;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+#page {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-areas:
+    'nav'
+    'main'
+    'foot ';
+  grid-template-rows: @nav-height 1fr 30px;
+  grid-template-columns: 1fr;
+}
+
+header {
+  width: 100%;
+  min-height: 500px;
+  background-color: @base-header-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page nav {
+  grid-area: nav;
+  background-color: @base-nav-color;
+  display: flex;
+  a {
+    text-decoration: none;
+    color: @base-font-color;
+    background-color: @base-nav-tab-color;
+    text-align: center;
+    height: @nav-height;
+    width: 150px;
+    line-height: @nav-height;
+  }
+  .selected {
+    background: darken(@base-nav-tab-color, 5%);
+    border-bottom: solid lighten(@accent-primary, 10%) 2px;
+    height: @nav-height - 2px;
+  }
+}
+
+#page main {
+  grid-area: main;
+  background-color: @base-main-background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+#page footer {
+  grid-area: foot;
+  background-color: @accent-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: solid lighten(@accent-primary, 10%) 1px;
+}
+
+.card {
+  background: @base-card-color;
+  color: @base-font-color;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 2px 16px;
+  max-width: 800px;
+  margin: 10px;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+}
