@@ -7,6 +7,8 @@ body {
   padding: 0;
   color: #ededed;
   box-sizing: border-box;
+  src: url('fonts/FiraCode.woff') format('woff');
+  font-family: 'Fira Code', monospace;
 }
 body {
   font-size: 1.6rem;
