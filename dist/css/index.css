@@ -56,25 +56,45 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 5rem;
+}
+header video {
+  width: 100%;
 }
 nav {
   grid-area: nav;
   background-color: #272727;
   display: flex;
+  border-bottom: solid #474747 1px;
 }
 nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: #ededed;
   background-color: #2d2d2d;
   text-align: center;
-  height: 40px;
+  height: 30px -1;
   width: 150px;
-  line-height: 40px;
+  font-size: 1.2rem;
+}
+nav a .tab-icon {
+  margin-right: 5px;
+}
+nav a .fa-home {
+  color: #e7582b;
+}
+nav a .fa-users {
+  color: #4caef6;
+}
+nav a .fa-bug {
+  color: #ffd12d;
 }
 nav .selected {
   background: #202020;
   border-bottom: solid #0ca3fc 2px;
-  height: 38px;
+  height: 28px;
 }
 html {
   font-size: 62.5%;
@@ -94,8 +114,14 @@ body {
   width: 100%;
   height: 100vh;
   grid-template-areas: 'nav' 'main' 'foot ';
-  grid-template-rows: 40px 1fr 30px;
+  grid-template-rows: 30px 1fr 30px;
   grid-template-columns: 1fr;
+}
+#bugmain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .grid {
   display: grid;
