@@ -1,0 +1,113 @@
+.card {
+  background: #2a2a2b;
+  color: #ededed;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  max-width: 800px;
+  min-width: 300px;
+  margin: 10px;
+}
+.card .card-header {
+  overflow: hidden;
+  height: 120px;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  background-color: #5c6bc0 !important;
+}
+.card .card-body {
+  padding: 2px 16px;
+}
+.card.avatar #avatar {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 120px;
+  margin-top: -60px;
+  overflow: hidden;
+  border: 5px solid #2a2a2b;
+}
+.card.avatar #avatar img {
+  width: 100%;
+  vertical-align: middle;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+main {
+  grid-area: main;
+  background-color: #212121;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+footer {
+  grid-area: foot;
+  background-color: #0385d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: solid #0ca3fc 1px;
+}
+header {
+  width: 100%;
+  min-height: 500px;
+  background-color: #3a3a3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  grid-area: nav;
+  background-color: #272727;
+  display: flex;
+}
+nav a {
+  text-decoration: none;
+  color: #ededed;
+  background-color: #2d2d2d;
+  text-align: center;
+  height: 40px;
+  width: 150px;
+  line-height: 40px;
+}
+nav .selected {
+  background: #202020;
+  border-bottom: solid #0ca3fc 2px;
+  height: 38px;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #ededed;
+  box-sizing: border-box;
+  src: url('fonts/FiraCode.woff') format('woff');
+  font-family: 'Fira Code', monospace;
+}
+body {
+  font-size: 1.6rem;
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-areas: 'nav' 'main' 'foot ';
+  grid-template-rows: 40px 1fr 30px;
+  grid-template-columns: 1fr;
+}
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 650px) {
+  .grid {
+    grid-template-columns: auto;
+  }
+}
