@@ -1,16 +1,22 @@
+html {
+  font-size: 62.5%;
+}
 html,
 body {
   margin: 0;
   padding: 0;
-  color: white;
+  color: #ededed;
   box-sizing: border-box;
+}
+body {
+  font-size: 1.6rem;
 }
 #page {
   display: grid;
   width: 100%;
   height: 100vh;
-  grid-template-areas: 'nav' 'main' 'foot ';
-  grid-template-rows: 50px 1fr 30px;
+  grid-template-areas: "nav" "main" "foot ";
+  grid-template-rows: 40px 1fr 30px;
   grid-template-columns: 1fr;
 }
 header {
@@ -23,7 +29,22 @@ header {
 }
 #page nav {
   grid-area: nav;
-  background-color: #2a2a2b;
+  background-color: #272727;
+  display: flex;
+}
+#page nav a {
+  text-decoration: none;
+  color: #ededed;
+  background-color: #2d2d2d;
+  text-align: center;
+  height: 40px;
+  width: 150px;
+  line-height: 40px;
+}
+#page nav .selected {
+  background: #202020;
+  border-bottom: solid #0ca3fc 2px;
+  height: 38px;
 }
 #page main {
   grid-area: main;
@@ -43,7 +64,7 @@ header {
 }
 .card {
   background: #2a2a2b;
-  color: white;
+  color: #ededed;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   padding: 2px 16px;
