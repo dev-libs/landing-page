@@ -7,9 +7,38 @@
   color: @base-font-color;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  padding: 2px 16px;
   max-width: 800px;
+  min-width: 300px;
   margin: 10px;
+
+  .card-header {
+    overflow: hidden;
+    height: 120px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    background-color: #5c6bc0 !important;
+  }
+
+  .card-body {
+    padding: 2px 16px;
+  }
+
+  &.avatar {
+    #avatar {
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50%;
+      width: 120px;
+      margin-top: -60px;
+      overflow: hidden;
+      border: 5px solid @base-card-color;
+
+      img {
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
 
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
