@@ -50,13 +50,12 @@ footer {
   border-top: solid #0ca3fc 1px;
 }
 header {
-  width: 100%;
-  min-height: 500px;
+  margin: 10px auto;
+  width: 95%;
   background-color: #3a3a3a;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 5rem;
 }
 header video {
   width: 100%;
