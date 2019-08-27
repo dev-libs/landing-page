@@ -73,7 +73,7 @@ class TeamMember {
       </div>
       <div class="card-body center">
         <h3>${this.name || this.login}</h3>
-        <p>${this.bio || ''}</p>
+        <span>${this.bio || ''}</span>
       </div>
       </a>`;
     element.className = 'card avatar animated fadeIn';
