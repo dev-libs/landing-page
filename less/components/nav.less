@@ -9,6 +9,10 @@ nav {
   justify-content: space-between;
   border-bottom: solid lighten(@base-nav-color, 12.5%) 1px;
 
+  @media @mobile {
+    flex-direction: column-reverse;
+  }
+
   .login {
     display: flex;
     align-items: center;
@@ -21,6 +25,11 @@ nav {
     width: 150px;
     font-size: 1.5rem;
 
+    @media @mobile {
+      width: 100%;
+      height: @nav-height + 12;
+    }
+
     i {
       margin-right: 5px;
     }
@@ -28,6 +37,7 @@ nav {
 
   .links {
     display: flex;
+    justify-content: space-evenly;
     a {
       display: flex;
       align-items: center;
@@ -39,6 +49,11 @@ nav {
       height: @nav-height -1;
       width: 150px;
       font-size: 1.2rem;
+
+      @media @mobile {
+        height: @nav-height + 16;
+        width: 33.33%;
+      }
 
       .tab-icon {
         margin-right: 5px;
@@ -60,6 +75,10 @@ nav {
       background: darken(@base-nav-tab-color, 5%);
       border-bottom: solid lighten(@accent-primary, 10%) 2px;
       height: @nav-height - 2px;
+
+      @media @mobile {
+        height: @nav-height + 16;
+      }
     }
   }
 }
