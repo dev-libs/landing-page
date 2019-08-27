@@ -4,13 +4,17 @@
 
 .grid {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
 
-  @media (max-width: 1000px) {
+  @media @three-col {
+    grid-template-columns: auto auto auto;
+  }
+
+  @media @two-col {
     grid-template-columns: auto auto;
   }
 
-  @media (max-width: 650px) {
+  @media @one-col {
     grid-template-columns: auto;
   }
 }
