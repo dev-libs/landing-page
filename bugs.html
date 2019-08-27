@@ -19,23 +19,27 @@
     </nav>
     <main>
       <div class="card" id="bugmain">
-        <div>
-          <h1>Submit a Bug</h1>
+        <div class="card-body">
+          <h1>submitABug(){</h1>
         </div>
-        <div>
-          Bug Title
+        <div class="card-body">
+          bugTitle={
           <br />
           <input type="text" id="bugdata_1" name="bugdata_1" />
+          <br />
+          }
         </div>
-        <div>
-          Issue Description
+        <div class="card-body">
+          issueDescription={
           <br />
           <textarea id="bugdata_2" name="bugdata_2"></textarea>
-        </div>
-        <div>
-          System
           <br />
-          <select id="bugdata_3" name="bugdata_3">
+          }
+        </div>
+        <div class="card-body">
+          system={
+          <br />
+          <select class="select-css" id="bugdata_3" name="bugdata_3">
             <option>iPhone</option>
             <option>Android</option>
             <option>Microsoft Windows 10</option>
@@ -49,11 +53,13 @@
             <option>Linux Mint</option>
             <option>Fedora</option>
           </select>
-        </div>
-        <div>
-          Browser
           <br />
-          <select id="bugdata_4" name="bugdata_4">
+          }
+        </div>
+        <div class="card-body">
+          browser={
+          <br />
+          <select class="select-css" id="bugdata_4" name="bugdata_4">
             <option>No Browser(Android/iPhone)</option>
             <option>Google Chrome</option>
             <option>Firefox</option>
@@ -62,8 +68,11 @@
             <option>Safari</option>
             <option>Opera</option>
           </select>
+          <br />
+          <p>}</p>
+          }
         </div>
-        <div>
+        <div class="card-body">
           <input name="skip_Submit" value="Submit" type="submit" />
         </div>
       </div>
