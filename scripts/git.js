@@ -4,77 +4,26 @@ class Organization {
   }
 
   async fetchTeams() {
-    const query = `{
-      organization(login: "${this.name}") {
-        teams(first: 6) {
-          nodes {
-            name
-            members {
-              nodes {
-                name
-                login
-                avatarUrl
-              }
-            }
-          }
-        }
-      }
-    }`;
-
-    let cache = localStorage.getItem('teams');
+    let cache = localStorage.getItem('organization');
     const result = cache
       ? JSON.parse(cache)
-      : await fetch('https://api.github.com/graphql', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: 'bearer 8b147c4c78d8524cb8c27abbc555245e021ceb14',
-          },
-          body: JSON.stringify({ query: query }),
-        }).then(res => res.json());
+      : await fetch(`https://api.github.com/orgs/${this.name}/public_members`).then(res => res.json());
 
-    localStorage.setItem('teams', JSON.stringify(result));
+    localStorage.setItem('organization', JSON.stringify(result));
 
-    this.teams = result.data.organization.teams.nodes.map(team => {
-      return new Team({ name: team.name, members: team.members.nodes });
+    this.members = result.map(member => {
+      return new TeamMember({
+        login: member.login,
+        avatar: member.avatar_url,
+      });
     });
-  }
-}
-
-class Team {
-  constructor(attr) {
-    this.name = attr.name;
-    this.members = attr.members.map(
-      member =>
-        new TeamMember({
-          name: member.name,
-          login: member.login,
-          avatar: member.avatarUrl,
-          team: attr.name,
-        })
-    );
-  }
-
-  render() {
-    let element = document.createElement('div');
-    element.innerHTML = `<h1 class="grid-header">${this.name}</h1>`;
-
-    let grid = document.createElement('div');
-    grid.className = 'grid';
-
-    this.members.forEach(member => grid.appendChild(member.render()));
-    element.appendChild(grid);
-
-    return element;
   }
 }
 
 class TeamMember {
   constructor(attr) {
-    this.name = attr.name;
     this.login = attr.login;
     this.avatar = attr.avatar;
-    this.team = attr.team;
   }
 
   render() {
@@ -95,4 +44,4 @@ class TeamMember {
   }
 }
 
-export { Organization, Team, TeamMember };
+export { Organization, TeamMember };
