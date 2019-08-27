@@ -21,13 +21,17 @@ nav {
     color: @base-font-color;
     background-color: lighten(@base-nav-tab-color, 10%);
     text-align: center;
-    height: @nav-height -1;
+    height: @nav-height;
     width: 150px;
     font-size: 1.5rem;
 
+    @media @tablet {
+      width: 25%;
+    }
+
     @media @mobile {
       width: 100%;
-      height: @nav-height + 12;
+      height: @mobile-nav-height / 2;
     }
 
     i {
@@ -38,6 +42,15 @@ nav {
   .links {
     display: flex;
     justify-content: space-evenly;
+
+    @media @tablet {
+      width: 75%;
+    }
+
+    @media @mobile {
+      width: 100%;
+    }
+
     a {
       display: flex;
       align-items: center;
@@ -46,12 +59,16 @@ nav {
       color: @base-font-color;
       background-color: @base-nav-tab-color;
       text-align: center;
-      height: @nav-height -1;
+      height: @nav-height;
       width: 150px;
       font-size: 1.2rem;
 
+      @media @tablet {
+        width: 33.33%;
+      }
+
       @media @mobile {
-        height: @nav-height + 16;
+        height: @mobile-nav-height / 2;
         width: 33.33%;
       }
 
@@ -74,10 +91,10 @@ nav {
     .selected {
       background: darken(@base-nav-tab-color, 5%);
       border-bottom: solid lighten(@accent-primary, 10%) 2px;
-      height: @nav-height - 2px;
+      height: @nav-height;
 
       @media @mobile {
-        height: @nav-height + 16;
+        height: @mobile-nav-height / 2;
       }
     }
   }
