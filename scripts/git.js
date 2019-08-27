@@ -65,16 +65,16 @@ class TeamMember {
     element.innerHTML = `
       <div class="card-header"></div>
       <a href="${this.url}" class="member-link">
-      <div class="avatar">
-        <img
-          src="${this.avatar}"
-          class="rounded-circle"
-        />
-      </div>
-      <div class="card-body center">
-        <h3>${this.name || this.login}</h3>
-        <span>${this.bio || ''}</span>
-      </div>
+        <div class="avatar">
+          <img
+            src="${this.avatar}"
+            class="rounded-circle"
+          />
+        </div>
+        <div class="card-body center">
+          <h3>${this.name || this.login}</h3>
+          <span>${this.bio || ''}</span>
+        </div>
       </a>`;
     element.className = 'card avatar animated fadeIn';
     await element.querySelector('img').decode();
