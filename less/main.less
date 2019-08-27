@@ -32,4 +32,8 @@ body {
     'foot ';
   grid-template-rows: @nav-height 1fr 30px;
   grid-template-columns: 1fr;
+
+  @media @mobile {
+    grid-template-rows: @mobile-nav-height 1fr 30px;
+  }
 }
