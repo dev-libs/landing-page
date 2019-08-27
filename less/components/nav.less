@@ -77,20 +77,20 @@ nav {
       }
 
       .fa-home {
-        color: @home-icon-color;
+        color: @second-accent-color;
       }
 
       .fa-users {
-        color: @project-icon-color;
+        color: @first-accent-color;
       }
 
       .fa-bug {
-        color: @bugs-icon-color;
+        color: @third-accent-color;
       }
     }
     .selected {
       background: darken(@base-nav-tab-color, 5%);
-      border-bottom: solid lighten(@accent-primary, 10%) 2px;
+      border-bottom: solid lighten(@first-accent-color, 10%) 2px;
       height: @nav-height;
 
       @media @mobile {
