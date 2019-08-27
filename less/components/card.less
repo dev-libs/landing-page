@@ -16,11 +16,15 @@
     height: 120px;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
-    background-color: #5c6bc0 !important;
+    background-color: @accent-primary;
   }
 
   .card-body {
     padding: 2px 16px;
+
+    &.center {
+      text-align: center;
+    }
   }
 
   &.avatar {
@@ -37,6 +41,11 @@
         width: 100%;
         vertical-align: middle;
       }
+    }
+
+    .member-link {
+      color: @base-font-color;
+      text-decoration: none;
     }
   }
 
