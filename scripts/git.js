@@ -21,7 +21,7 @@ class Member {
     this.avatar = attr.avatar;
   }
 
-  render() {
+  async render() {
     let element = document.createElement('div');
     element.innerHTML = `
       <div class="card-header"></div>
@@ -35,6 +35,7 @@ class Member {
         <h1>${this.login}</h1>
       </div>`;
     element.className = 'card avatar';
+    await element.querySelector('img').decode();
     return element;
   }
 }
