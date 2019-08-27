@@ -38,7 +38,7 @@ Humor
 ---
 
 - What 3rd party frameworks/libraries are you considering using?
-React, Redux, Node, Express, bCrypt, Knex, Cors, Helmet
+React, Redux, Node, Express, bCrypt, Knex, Cors, Helmet, Core Data
 
 - Do APIs require you to contact its maintainer to gain access?
 No
