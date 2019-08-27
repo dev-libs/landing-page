@@ -19,7 +19,7 @@ class Technology {
   async render() {
     let element = document.createElement('div');
     element.innerHTML = `
-      <div class="card-header"></div>
+      <div class="card-header yellow"></div>
       <div class="avatar">
         <img src="${this.img}" alt="${this.name}" />
       </div>
