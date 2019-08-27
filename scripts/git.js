@@ -30,6 +30,7 @@ class Organization {
       user.name = info.name;
     }
   }
+
   checkCache() {
     let cache = localStorage.getItem('organization');
     cache = cache ? JSON.parse(cache) : null;
@@ -40,7 +41,6 @@ class Organization {
     const expire = new Date();
     expire.setHours(expire.getHours() + hours);
     localStorage.setItem('organization', JSON.stringify({ expire: expire.getTime(), data: data }));
-    return data;
   }
 
   error(message) {
