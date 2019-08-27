@@ -10,7 +10,7 @@ class Organization {
       : await fetch(`https://api.github.com/orgs/${this.name}/public_members`).then(res => res.json());
 
     if (!cache) {
-      await this.getNames(result);
+      await this.getInfo(result);
       this.setCache(result, 1);
     }
 
@@ -20,14 +20,16 @@ class Organization {
         login: member.login,
         avatar: member.avatar_url,
         url: member.html_url,
+        bio: member.bio,
       });
     });
   }
 
-  async getNames(users) {
+  async getInfo(users) {
     for (const user of users) {
       const info = await fetch(user.url).then(res => res.json());
       user.name = info.name;
+      user.bio = info.bio;
     }
   }
 
@@ -55,6 +57,7 @@ class TeamMember {
     this.login = attr.login;
     this.avatar = attr.avatar;
     this.url = attr.url;
+    this.bio = attr.bio;
   }
 
   async render() {
@@ -70,9 +73,10 @@ class TeamMember {
       </div>
       <div class="card-body center">
         <h3>${this.name || this.login}</h3>
+        <p>${this.bio || ''}</p>
       </div>
       </a>`;
-    element.className = 'card avatar';
+    element.className = 'card avatar animated fadeIn';
     await element.querySelector('img').decode();
     return element;
   }
