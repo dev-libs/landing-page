@@ -4,15 +4,10 @@ class Organization {
   }
 
   async fetchTeams() {
-    let cache = localStorage.getItem('organization');
-    const result = cache
-      ? JSON.parse(cache)
-      : await fetch(`https://api.github.com/orgs/${this.name}/public_members`).then(res => res.json());
-
-    localStorage.setItem('organization', JSON.stringify(result));
+    const result = await fetch(`https://api.github.com/orgs/${this.name}/public_members`).then(res => res.json());
 
     this.members = result.map(member => {
-      return new TeamMember({
+      return new Member({
         login: member.login,
         avatar: member.avatar_url,
       });
@@ -20,7 +15,7 @@ class Organization {
   }
 }
 
-class TeamMember {
+class Member {
   constructor(attr) {
     this.login = attr.login;
     this.avatar = attr.avatar;
@@ -44,4 +39,4 @@ class TeamMember {
   }
 }
 
-export { Organization, TeamMember };
+export { Organization, Member };
