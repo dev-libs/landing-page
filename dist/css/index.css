@@ -1,3 +1,4 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css';
 .card {
   background: #2a2a2b;
   color: #ededed;
@@ -12,12 +13,15 @@
   height: 120px;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-  background-color: #5c6bc0 !important;
+  background-color: #0385d2;
 }
 .card .card-body {
   padding: 2px 16px;
 }
-.card.avatar #avatar {
+.card .card-body.center {
+  text-align: center;
+}
+.card.avatar .avatar {
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
@@ -26,9 +30,13 @@
   overflow: hidden;
   border: 5px solid #2a2a2b;
 }
-.card.avatar #avatar img {
+.card.avatar .avatar img {
   width: 100%;
   vertical-align: middle;
+}
+.card.avatar .member-link {
+  color: #ededed;
+  text-decoration: none;
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -119,10 +127,7 @@ html {
 }
 html,
 body {
-  margin: 0;
-  padding: 0;
   color: #ededed;
-  box-sizing: border-box;
   src: url('fonts/FiraCode.woff') format('woff');
   font-family: 'Fira Code', monospace;
 }
