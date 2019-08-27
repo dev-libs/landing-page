@@ -5,6 +5,7 @@ class Technologies {
         new Technology({
           name: member.name,
           img: member.img,
+          link: member.link,
         })
     );
   }
@@ -14,18 +15,21 @@ class Technology {
   constructor(attr) {
     this.name = attr.name;
     this.img = attr.img;
+    this.link = attr.link;
   }
 
   async render() {
     let element = document.createElement('div');
     element.innerHTML = `
       <div class="card-header yellow"></div>
-      <div class="avatar">
-        <img src="${this.img}" alt="${this.name}" />
-      </div>
-      <div class="card-body center">
-        <h3>${this.name}</h3>
-      </div>`;
+      <a href="${this.link}" class="member-link">
+        <div class="avatar">
+          <img src="${this.img}" alt="${this.name}" />
+        </div>
+        <div class="card-body center">
+          <h3>${this.name}</h3>
+        </div>
+      </a>`;
     element.className = 'card avatar';
     await element.querySelector('img').decode();
     return element;
