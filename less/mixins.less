@@ -1,1 +1,77 @@
 // main: ./index.less
+@import 'vars';
+
+.fira {
+  font-size: 1.6rem;
+  color: @base-font-color;
+  src: url('fonts/FiraCode.woff') format('woff');
+  font-family: 'Fira Code', monospace;
+}
+
+.shadow(@alpha) {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, @alpha);
+}
+
+.round(@radius: 50%, @top_only: false) {
+  overflow: hidden;
+  & when (@top_only = false) {
+    border-radius: @radius;
+  }
+
+  & when (@top_only = true) {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+}
+
+.border(@size: 5px, @color: @base-card-color) {
+  border: @size solid @color;
+  background-color: @color;
+}
+
+.blue {
+  background-color: @first-accent-color;
+}
+
+.orange {
+  background-color: @second-accent-color;
+}
+
+.yellow {
+  background-color: @third-accent-color;
+}
+
+.popOut(@out: 50px) {
+  margin-top: @out * -1;
+}
+
+.pad(@padding: 16px, @padding-top: @padding, @padding-bottom: @padding) {
+  padding: @padding-top @padding @padding-bottom;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.hide {
+  display: none !important;
+}
+
+.animate {
+  transition: all 0.3s;
+}
+
+.blur {
+  background-color: #0000004d;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
