@@ -2,20 +2,72 @@
 @import '../vars';
 @import '../mixins';
 
-.large {
-  display: block;
-  min-height: 500px;
+.home-section {
   width: 100%;
-}
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-p {
-  width: 70%;
-  margin-left: 15rem;
-  @media @mobile {
-    margin-left: 0rem;
+  @media @tablet {
+    flex-direction: column;
+    padding: 10px;
   }
-}
 
-h2 {
-  margin-left: 5rem;
+  img {
+    width: 50%;
+
+    @media @desktop {
+      width: 40%;
+    }
+
+    @media @tablet {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    @media @mobile {
+      display: none;
+    }
+  }
+
+  .text {
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+
+    @media @desktop {
+      padding: 5px;
+      width: 60%;
+    }
+
+    @media @tablet {
+      width: 100%;
+      padding: 10px;
+    }
+
+    h2 {
+      font-size: 4rem;
+      text-transform: uppercase;
+
+      @media @desktop {
+        font-size: 2rem;
+      }
+
+      @media @tablet {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      font-size: 1.8rem;
+
+      @media @desktop {
+        font-size: 1.35rem;
+      }
+
+      @media @tablet {
+        font-size: 1.8rem;
+      }
+    }
+  }
 }
