@@ -1,37 +1,76 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css';
 @import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css';
+@import 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css';
+.fira {
+  font-size: 1.6rem;
+  color: #ededed;
+  src: url('fonts/FiraCode.woff') format('woff');
+  font-family: 'Fira Code', monospace;
+}
+.blue {
+  background-color: #0385d2;
+}
+.orange {
+  background-color: #e7582b;
+}
+.yellow {
+  background-color: #ffd12d;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.center-text {
+  text-align: center;
+}
+.hide {
+  display: none !important;
+}
+.animate {
+  transition: all 0.3s;
+}
+.blur {
+  background-color: #000000a8;
+}
 .card {
   background: #2a2a2b;
   color: #ededed;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
   min-width: 300px;
   margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  overflow: hidden;
   border-radius: 1rem;
+  transition: all 0.3s;
 }
 .card .card-header {
-  overflow: hidden;
   height: 150px;
+  min-width: 100%;
+  overflow: hidden;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  background-color: #0385d2;
-}
-.card .card-header.yellow {
-  background-color: #ffd12d;
 }
 .card .card-body {
-  padding: 2px 16px 16px;
+  min-height: calc(100% - 150px);
+  padding: 16px 16px 16px;
 }
 .card.avatar {
   height: 340px;
 }
 .card.avatar .avatar {
+  width: 140px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 50%;
-  width: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: -80px;
   overflow: hidden;
+  border-radius: 50%;
   border: 5px solid #2a2a2b;
   background-color: #2a2a2b;
 }
@@ -39,13 +78,15 @@
   width: 100%;
   vertical-align: middle;
 }
+.card.avatar .card-body {
+  padding: 2px 16px 16px;
+}
 .card.avatar .member-link {
   color: #ededed;
   text-decoration: none;
 }
 main {
   grid-area: main;
-  background-color: #212121;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,6 +104,11 @@ footer {
 footer * {
   margin: 0 8px;
 }
+@media (max-width: 500px) {
+  footer {
+    display: none;
+  }
+}
 header {
   background-image: url('../images/devices.jpg');
   background-repeat: no-repeat;
@@ -73,18 +119,18 @@ header {
   width: 100%;
 }
 header .text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  text-shadow: 1px 2px 2px #000;
-  text-transform: uppercase;
-  background-color: #0000004d;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
   width: 100%;
   min-height: 100vh;
+  text-shadow: 1px 2px 2px #000;
+  text-transform: uppercase;
+  background-color: #000000a8;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 header h1 {
   font-size: 8rem;
@@ -228,7 +274,6 @@ nav .links a .fa-bug {
 nav .links .selected {
   background: #202020;
   border-bottom: solid #0ca3fc 2px;
-  height: 60px;
 }
 @media (max-width: 500px) {
   nav .links .selected {
@@ -240,92 +285,60 @@ html {
   max-width: 100%;
   background-color: #212121;
 }
-html,
 body {
+  height: 100vh;
+  width: 100%;
+  font-size: 1.6rem;
   color: #ededed;
   src: url('fonts/FiraCode.woff') format('woff');
   font-family: 'Fira Code', monospace;
-}
-body {
-  font-size: 1.6rem;
   display: grid;
-  width: 100%;
-  height: 100vh;
   grid-template-areas: 'nav' 'main' 'foot ';
   grid-template-rows: 60px 1fr 30px;
-  grid-template-columns: 1fr;
 }
 @media (max-width: 500px) {
   body {
-    grid-template-rows: 120px 1fr 30px;
+    grid-template-rows: 120px 1fr;
   }
 }
-.center {
-  text-align: center;
+.styled-input {
+  margin: 10px;
 }
-.blue {
-  background-color: #0385d2;
-}
-.orange {
-  background-color: #e7582b;
-}
-.yellow {
-  background-color: #ffd12d;
-}
-#bugmain {
+#bug-form {
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.select-css {
-  display: block;
-  src: url('fonts/FiraCode.woff') format('woff');
-  font-family: 'Fira Code', monospace;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #ededed;
-  line-height: 1.3;
-  padding: 0.6em 1.4em 0.5em 0.8em;
-  width: 300px;
-  max-width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #2d2d2d;
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
-  background-repeat: no-repeat, repeat;
-  background-position: right 0.7em top 50%, 0 0;
-  background-size: 0.65em auto, 100%;
+#bug-form .card {
+  width: 85vw;
+  overflow-y: scroll;
 }
-.select-css:-ms-expand {
-  display: none;
+#bug-form .card .card-header {
+  height: 50px;
 }
-.select-css:hover {
-  background: #545454;
+#bug-form .card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.select-css:focus {
-  color: #ededed;
-  background: #545454;
-  outline: none;
+#bug-form .card .card-body .inputs {
+  display: flex;
+  flex-direction: column;
 }
-.select-css option {
-  font-weight: normal;
-  background-color: #2d2d2d;
+#bug-form .card .card-body .inputs .mdc-text-field,
+#bug-form .card .card-body .inputs .mdc-select {
+  margin: 10px 0;
 }
-#bugdata_1,
-#bugdata_2 {
-  width: 300px;
-  max-width: 100%;
-}
-input {
-  color: #ededed;
-  background: #434345;
-}
-textarea {
-  background: #434345;
+#bug-form .card .card-body #submit {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .home-section {
   min-height: fit-content;
@@ -362,12 +375,12 @@ textarea {
 }
 .home-section .text {
   width: 50%;
+  padding: 5px;
   padding: 10px;
   text-align: center;
 }
 @media (max-width: 1000px) {
   .home-section .text {
-    padding: 5px;
     width: 60%;
   }
 }
@@ -426,15 +439,60 @@ textarea {
 }
 #loading {
   min-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .project-section {
   width: 95%;
-  transition: ease-in 0.5s all;
   margin-bottom: 50px;
 }
-.hide {
-  display: none !important;
+label {
+  font-size: 1.6rem !important;
+  line-height: 1.8rem !important;
+}
+input {
+  font-size: 1.6rem !important;
+  line-height: 2.8rem !important;
+}
+textarea {
+  font-size: 1.6rem !important;
+  line-height: 2.8rem !important;
+}
+button {
+  font-size: 1.6rem !important;
+}
+select {
+  font-size: 1.6rem !important;
+}
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: var(--mdc-theme-primary) !important;
+}
+.mdc-select--focused .mdc-floating-label {
+  color: var(--mdc-theme-primary) !important;
+}
+.mdc-floating-label {
+  color: white !important;
+}
+.mdc-text-field * {
+  color: white !important;
+}
+.mdc-text-field:not(.mdc-text-field--focused) .mdc-notched-outline__leading,
+.mdc-text-field:not(.mdc-text-field--focused) .mdc-notched-outline__notch,
+.mdc-text-field:not(.mdc-text-field--focused) .mdc-notched-outline__trailing {
+  border-color: white !important;
+}
+.mdc-select * {
+  color: white !important;
+}
+.mdc-select:not(.mdc-select--focused) .mdc-notched-outline__leading,
+.mdc-select:not(.mdc-select--focused) .mdc-notched-outline__notch,
+.mdc-select:not(.mdc-select--focused) .mdc-notched-outline__trailing {
+  border-color: white !important;
+}
+:root {
+  --mdc-theme-primary: #ffd12d;
 }
