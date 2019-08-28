@@ -6,7 +6,10 @@ footer {
   grid-area: foot;
   background-color: @first-accent-color;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   border-top: solid lighten(@first-accent-color, 10%) 1px;
+  * {
+    margin: 0 8px;
+  }
 }
