@@ -34,7 +34,7 @@
   transition: all 0.3s;
 }
 .blur {
-  background-color: #000000a8;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .card {
   background: #2a2a2b;
@@ -121,9 +121,8 @@ header {
 header .text {
   width: 100%;
   min-height: 100vh;
-  text-shadow: 1px 2px 2px #000;
   text-transform: uppercase;
-  background-color: #000000a8;
+  background-color: rgba(0, 0, 0, 0.8);
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -314,6 +313,7 @@ body {
   overflow-y: auto;
 }
 #bug-form .card .card-header {
+  text-shadow: 1px 2px 2px #000;
   height: 50px;
 }
 #bug-form .card .card-body {
@@ -374,6 +374,7 @@ body {
   width: 50%;
   padding: 5px;
   padding: 10px;
+  text-shadow: 1px 2px 2px #000;
   text-align: center;
 }
 @media (max-width: 1000px) {
@@ -471,6 +472,10 @@ select {
 .mdc-select--focused .mdc-floating-label {
   color: var(--mdc-theme-primary) !important;
 }
+.mdc-button--raised:not(:disabled),
+.mdc-button--unelevated:not(:disabled) {
+  background-color: var(--mdc-theme-primary, #6200ee) !important;
+}
 .mdc-floating-label {
   color: white !important;
 }
@@ -485,7 +490,7 @@ select {
 .mdc-select * {
   color: white !important;
 }
-.mdc-select option {
+.mdc-selet option {
   background: #272727 !important;
 }
 .mdc-select:not(.mdc-select--focused) .mdc-notched-outline__leading,
@@ -495,4 +500,7 @@ select {
 }
 :root {
   --mdc-theme-primary: #ffd12d;
+}
+.mdc-button {
+  text-shadow: 1px 2px 2px #000;
 }
