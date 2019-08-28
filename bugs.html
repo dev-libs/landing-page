@@ -8,6 +8,7 @@
     <meta name="description" content="Dev Libs! Mad libs for developers!" />
     <link rel="stylesheet" href="./css/index.css" />
     <script src="https://kit.fontawesome.com/7c85345c69.js"></script>
+    <script type="text/javascript" src="scripts/bugs.js"></script>
   </head>
   <body>
     <nav>
@@ -19,63 +20,60 @@
       <a class="login" href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
     </nav>
     <main>
+      <!-- <form action="https://formspree.io/dev.libs.bugs@gmail.com" method="POST"> -->
       <div class="card" id="bugmain">
-        <div class="card-body">
+        <div class="card-header yellow">
           <h1>submitABug(){</h1>
+          <i class="tab-icon fas fa-bug fa-2x "></i>
         </div>
         <div class="card-body">
-          bugTitle={
-          <br />
-          <input type="text" id="bugdata_1" name="bugdata_1" />
-          <br />
-          }
+          <div>
+            bugTitle={
+            <br />
+            <input type="text" id="bugdata_1" name="title" />
+            <br />
+            }
+          </div>
+          <div>
+            issueDescription={
+            <br />
+            <textarea id="bugdata_2" name="issue"></textarea>
+            <br />
+            }
+          </div>
+          <div>
+            system={
+            <br />
+            <select class="select-css" id="bugdata_3" name="system">
+              <option>iOS</option>
+              <option>Android</option>
+              <option>Browser</option>
+            </select>
+            <br />
+            }
+          </div>
+          <div>
+            browser={
+            <br />
+            <select class="select-css" id="bugdata_4" name="browser">
+              <option>No Browser(Android/iPhone)</option>
+              <option>Google Chrome</option>
+              <option>Firefox</option>
+              <option>Internet Explorer</option>
+              <option>Microsoft Edge</option>
+              <option>Safari</option>
+              <option>Opera</option>
+            </select>
+            <br />
+            <p>}</p>
+            }
+          </div>
+          <div id="subButton">
+            <input onClick="bugReport()" name="Submit" value="Submit" type="submit" id="submit" />
+          </div>
         </div>
-        <div class="card-body">
-          issueDescription={
-          <br />
-          <textarea id="bugdata_2" name="bugdata_2"></textarea>
-          <br />
-          }
-        </div>
-        <div class="card-body">
-          system={
-          <br />
-          <select class="select-css" id="bugdata_3" name="bugdata_3">
-            <option>iPhone</option>
-            <option>Android</option>
-            <option>Microsoft Windows 10</option>
-            <option>Microsoft Windows 8</option>
-            <option>Microsoft Windows 7</option>
-            <option>Microsoft Windows XP</option>
-            <option>Mac OS X</option>
-            <option>Google Chrome OS</option>
-            <option>Android</option>
-            <option>Ubuntu</option>
-            <option>Linux Mint</option>
-            <option>Fedora</option>
-          </select>
-          <br />
-          }
-        </div>
-        <div class="card-body">
-          browser={
-          <br />
-          <select class="select-css" id="bugdata_4" name="bugdata_4">
-            <option>No Browser(Android/iPhone)</option>
-            <option>Google Chrome</option>
-            <option>Firefox</option>
-            <option>Internet Explorer</option>
-            <option>Microsoft Edge</option>
-            <option>Safari</option>
-            <option>Opera</option>
-          </select>
-          <br />
-          <p>}</p>
-          }
-        </div>
-        <div class="card-body">
-          <input name="skip_Submit" value="Submit" type="submit" />
-        </div>
+
+        <!-- </form> -->
       </div>
     </main>
     <footer>
