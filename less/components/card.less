@@ -15,7 +15,6 @@
   .animate();
 
   .card-header {
-    overflow: hidden;
     height: 150px;
     min-width: 100%;
     .round(1rem, true);
@@ -27,13 +26,11 @@
   }
 
   &.avatar {
-    height: 340px;
-
     .avatar {
       width: 140px;
 
       .center();
-      .popOut(80px);
+      .popOut(90px);
       .round();
       .border();
 
@@ -44,7 +41,7 @@
     }
 
     .card-body {
-      .pad(16px, 2px);
+      .pad(16px, 2px, 24px);
     }
 
     .member-link {
