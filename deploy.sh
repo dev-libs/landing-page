@@ -2,6 +2,7 @@
 cp ./*.html ./dist/
 cp -R ./css ./dist/
 cp -r ./fonts ./dist/
+cp -r ./images ./dist/
 cp -r ./scripts ./dist/
 cp -r ./videos ./dist/
 cp ./README.md ./dist/
