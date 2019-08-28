@@ -63,12 +63,12 @@ class TeamMember {
   async render() {
     let element = document.createElement('div');
     element.innerHTML = `
-      <div class="card-header"></div>
+      <div class="card-header blue"></div>
       <a href="${this.url}" class="member-link">
         <div class="avatar">
           <img src="${this.avatar}" alt="${this.name || this.login}"/>
         </div>
-        <div class="card-body center">
+        <div class="card-body center-text">
           <h3>${this.name || this.login}</h3>
           <span>${this.bio || ''}</span>
         </div>

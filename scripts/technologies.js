@@ -26,7 +26,7 @@ class Technology {
         <div class="avatar">
           <img src="${this.img}" alt="${this.name}" />
         </div>
-        <div class="card-body center">
+        <div class="card-body center-text">
           <h3>${this.name}</h3>
         </div>
       </a>`;
