@@ -90,7 +90,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 footer {
@@ -301,9 +301,6 @@ body {
     grid-template-rows: 120px 1fr;
   }
 }
-.styled-input {
-  margin: 10px;
-}
 #bug-form {
   margin-left: auto;
   margin-right: auto;
@@ -314,7 +311,7 @@ body {
 }
 #bug-form .card {
   width: 85vw;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 #bug-form .card .card-header {
   height: 50px;
