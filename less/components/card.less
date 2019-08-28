@@ -17,11 +17,13 @@
   .card-header {
     overflow: hidden;
     height: 150px;
+    min-width: 100%;
     .round(1rem, true);
   }
 
   .card-body {
-    .pad(16px, 2px);
+    min-height: ~'calc(100% - 150px)';
+    .pad(16px);
   }
 
   &.avatar {
@@ -39,6 +41,10 @@
         width: 100%;
         vertical-align: middle;
       }
+    }
+
+    .card-body {
+      .pad(16px, 2px);
     }
 
     .member-link {
