@@ -6,6 +6,7 @@ class Technologies {
           name: member.name,
           img: member.img,
           link: member.link,
+          info: member.info,
         })
     );
   }
@@ -16,6 +17,7 @@ class Technology {
     this.name = attr.name;
     this.img = attr.img;
     this.link = attr.link;
+    this.info = attr.info;
   }
 
   async render() {
@@ -28,6 +30,7 @@ class Technology {
         </div>
         <div class="card-body center-text">
           <h3>${this.name}</h3>
+          <span>${this.info || ''}</span>
         </div>
       </a>`;
     element.className = 'card avatar';
