@@ -39,7 +39,8 @@ const usedTechnogies = [
   },
   {
     name: 'Helmet',
-    img: 'https://helmetjs.github.io/resources/logo.svg',
+    img:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFEGEpKfWXds5O8lYhjrSlbfjjWbsK_l6S1hpARl34rJxKqZn7eYEd6g',
     link: 'https://helmetjs.github.io/',
   },
   {
