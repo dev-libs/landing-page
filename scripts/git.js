@@ -74,8 +74,12 @@ class TeamMember {
         </div>
       </a>`;
     element.className = 'card avatar';
-    await element.querySelector('img').decode();
-    return element;
+
+    try {
+      await element.querySelector('img').decode();
+    } finally {
+      return element;
+    }
   }
 }
 
