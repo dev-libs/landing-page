@@ -307,6 +307,7 @@ body {
 }
 #bug-form .card {
   width: 85vw;
+  max-width: 800px;
   overflow-y: auto;
 }
 #bug-form .card .card-header {
