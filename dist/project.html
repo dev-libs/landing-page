@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Dev Libs</title>
+    <meta name="description" content="Dev Libs! Mad libs for developers!" />
     <link rel="stylesheet" href="./css/index.css" />
     <script src="https://kit.fontawesome.com/7c85345c69.js"></script>
     <script type="module" src="./scripts/project.js"></script>
@@ -19,15 +20,20 @@
       <a class="login" href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
     </nav>
     <main>
-      <section id="team">
+      <section id="loading" class="animated fadeIn">
+        <i class="fas fa-3x fa-circle-notch fa-spin"></i>
+      </section>
+      <section class="project-section hide" id="team">
         <h1 class="center">The Team</h1>
         <div id="members" class="grid"></div>
       </section>
-      <section id="tech">
+      <section class="project-section hide" id="tech">
         <h1 class="center">Technologies</h1>
         <div id="technologies" class="grid"></div>
       </section>
     </main>
-    <footer>Footer</footer>
+    <footer>
+      <span><i class="fas fa-copyright fa-1x"></i>2019</span>
+    </footer>
   </body>
 </html>
