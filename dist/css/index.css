@@ -485,7 +485,7 @@ select {
 .mdc-select * {
   color: white !important;
 }
-.mdc-selet option {
+.mdc-select option {
   background: #272727 !important;
 }
 .mdc-select:not(.mdc-select--focused) .mdc-notched-outline__leading,
