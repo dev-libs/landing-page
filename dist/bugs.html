@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Dev Libs</title>
     <meta name="description" content="Dev Libs! Mad libs for developers!" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="stylesheet" href="./css/index.css" />
-
     <script src="https://kit.fontawesome.com/7c85345c69.js"></script>
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   </head>
@@ -21,62 +21,63 @@
       <a class="login" href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
     </nav>
     <main id="bug-form">
-      <!-- <form action="https://formspree.io/dev.libs.bugs@gmail.com" method="POST"> -->
       <div class="card animated fadeIn">
         <div class="card-header yellow center">
           <h2>bugReport <i class="tab-icon fas fa-bug fa-1x"></i></h2>
         </div>
         <div class="card-body">
-          <div class="inputs">
-            <div class="mdc-text-field mdc-text-field--outlined">
-              <input class="mdc-text-field__input" id="text-field-hero-input" />
-              <div class="mdc-notched-outline">
-                <div class="mdc-notched-outline__leading"></div>
-                <div class="mdc-notched-outline__notch">
-                  <label for="text-field-hero-input" class="mdc-floating-label">title:</label>
+          <form action="https://formspree.io/dev.libs.bugs@gmail.com" method="POST">
+            <div class="inputs">
+              <div class="mdc-text-field mdc-text-field--outlined">
+                <input class="mdc-text-field__input" name="_subject" id="text-field-hero-input" />
+                <div class="mdc-notched-outline">
+                  <div class="mdc-notched-outline__leading"></div>
+                  <div class="mdc-notched-outline__notch">
+                    <label for="text-field-hero-input" class="mdc-floating-label">title:</label>
+                  </div>
+                  <div class="mdc-notched-outline__trailing"></div>
                 </div>
-                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+
+              <div class="mdc-select mdc-select--outlined">
+                <select name="platform" class="mdc-select__native-control">
+                  <option value="" disabled selected></option>
+                  <option value="android">
+                    Android
+                  </option>
+                  <option value="ios">
+                    iOS
+                  </option>
+                  <option value="fronted">
+                    Web
+                  </option>
+                </select>
+
+                <div class="mdc-notched-outline">
+                  <div class="mdc-notched-outline__leading"></div>
+                  <div class="mdc-notched-outline__notch">
+                    <label class="mdc-floating-label">platform:</label>
+                  </div>
+                  <div class="mdc-notched-outline__trailing"></div>
+                </div>
+              </div>
+
+              <div class="mdc-text-field mdc-text-field--textarea">
+                <textarea id="textarea" name="bug" class="mdc-text-field__input" rows="4" cols="40"></textarea>
+                <div class="mdc-notched-outline">
+                  <div class="mdc-notched-outline__leading"></div>
+                  <div class="mdc-notched-outline__notch">
+                    <label for="textarea" class="mdc-floating-label">body:</label>
+                  </div>
+                  <div class="mdc-notched-outline__trailing"></div>
+                </div>
               </div>
             </div>
 
-            <div class="mdc-select mdc-select--outlined">
-              <select class="mdc-select__native-control">
-                <option value="" disabled selected></option>
-                <option value="android">
-                  Android
-                </option>
-                <option value="ios">
-                  iOS
-                </option>
-                <option value="fronted">
-                  Web
-                </option>
-              </select>
-
-              <div class="mdc-notched-outline">
-                <div class="mdc-notched-outline__leading"></div>
-                <div class="mdc-notched-outline__notch">
-                  <label class="mdc-floating-label">platform:</label>
-                </div>
-                <div class="mdc-notched-outline__trailing"></div>
-              </div>
-            </div>
-
-            <div class="mdc-text-field mdc-text-field--textarea">
-              <textarea id="textarea" class="mdc-text-field__input" rows="4" cols="40"></textarea>
-              <div class="mdc-notched-outline">
-                <div class="mdc-notched-outline__leading"></div>
-                <div class="mdc-notched-outline__notch">
-                  <label for="textarea" class="mdc-floating-label">body:</label>
-                </div>
-                <div class="mdc-notched-outline__trailing"></div>
-              </div>
-            </div>
-          </div>
-
-          <button id="submit" onClick="bugReport()" class="mdc-button mdc-button--raised mdc-ripple">
-            Submit
-          </button>
+            <button id="submit" type="submit" class="mdc-button mdc-button--raised mdc-ripple">
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </main>
