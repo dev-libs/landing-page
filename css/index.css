@@ -209,7 +209,7 @@ nav .login {
 }
 @media (max-width: 800px) {
   nav .login {
-    width: 16%;
+    width: 25%;
   }
 }
 @media (max-width: 500px) {
@@ -227,7 +227,7 @@ nav .links {
 }
 @media (max-width: 800px) {
   nav .links {
-    width: 84%;
+    width: 75%;
   }
 }
 @media (max-width: 500px) {
@@ -269,9 +269,6 @@ nav .links a .fa-users {
 }
 nav .links a .fa-bug {
   color: #ffd12d;
-}
-nav .links a .fa-check-double {
-  color: #6a9955;
 }
 nav .links .selected {
   background: #202020;
