@@ -2,7 +2,6 @@
 
 ## Proposal
 
----
 
 - What problem does your app solve?
 Mood lightener, positive reinforcement
@@ -14,8 +13,6 @@ It provides random silly humor based on the users input.
 Witty comic relief for developers.
 
 ## Features
-
----
 
 - What features are required for your minimum viable product?
 
@@ -35,7 +32,6 @@ Humor
 
 ## Frameworks - Libraries
 
----
 
 - What 3rd party frameworks/libraries are you considering using?
 React, Redux, Node, Express, bCrypt, Knex, Cors, Helmet, Core Data
@@ -51,7 +47,6 @@ Uikit.
 
 ## For Data Scientists
 
----
 
 - Describe the Established data source with at least rough data able to be provided on day 1.
 - You can gather information about the data set you’ll be working with from the project description. Be sure to collaborate with your PM, and your Backend Architect to chat about the resources you have.
@@ -60,7 +55,6 @@ Uikit.
 
 ## Target Audience
 
----
 
 - Who is your target audience? Be specific.
 Developers
@@ -73,12 +67,10 @@ Not yet.
 
 ## Research
 
----
 
 - Research thoroughly before writing a single line of code. Solidify the features of your app conceptually before implementation. Spend the weekend researching so you can hit the ground running on Monday.
 
 ## Prototype Key Feature(s)
 
----
 
 - This is the “bread and butter” of the app, this is what makes your app yours.Calculate how long it takes to implement these features and triple the time estimated. That way you’ll have plenty of time to finish. It is preferred to drop features and spend more time working on your MVP features if needed.
