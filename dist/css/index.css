@@ -16,6 +16,9 @@
 .yellow {
   background-color: #ffd12d;
 }
+.green {
+  background-color: #6a9955;
+}
 .center {
   margin-left: auto;
   margin-right: auto;
@@ -206,7 +209,7 @@ nav .login {
 }
 @media (max-width: 800px) {
   nav .login {
-    width: 25%;
+    width: 16%;
   }
 }
 @media (max-width: 500px) {
@@ -224,7 +227,7 @@ nav .links {
 }
 @media (max-width: 800px) {
   nav .links {
-    width: 75%;
+    width: 84%;
   }
 }
 @media (max-width: 500px) {
@@ -267,6 +270,9 @@ nav .links a .fa-users {
 nav .links a .fa-bug {
   color: #ffd12d;
 }
+nav .links a .fa-check-double {
+  color: #6a9955;
+}
 nav .links .selected {
   background: #202020;
   border-bottom: solid #0ca3fc 2px;
@@ -297,37 +303,29 @@ body {
     grid-template-rows: 120px 1fr;
   }
 }
-#bug-form {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#bug-form .card {
+#bug-page .card {
   width: 85vw;
   max-width: 800px;
   overflow-y: auto;
 }
-#bug-form .card .card-header {
+#bug-page .card .card-header {
   text-shadow: 1px 2px 2px #000;
   height: 50px;
 }
-#bug-form .card .card-body {
+#bug-page .card .card-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-#bug-form .card .card-body .inputs {
+#bug-page .card .card-body .inputs {
   display: flex;
   flex-direction: column;
 }
-#bug-form .card .card-body .inputs .mdc-text-field,
-#bug-form .card .card-body .inputs .mdc-select {
+#bug-page .card .card-body .inputs .mdc-text-field,
+#bug-page .card .card-body .inputs .mdc-select {
   margin: 10px 0;
 }
-#bug-form .card .card-body #submit {
+#bug-page .card .card-body #submit {
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -347,6 +345,9 @@ body {
     flex-direction: column;
     padding: 10px;
   }
+}
+.home-section img {
+  margin: 10px 0;
 }
 @media (max-width: 500px) {
   .home-section img {
@@ -430,6 +431,10 @@ body {
 .project-section {
   width: 95%;
   margin-bottom: 50px;
+}
+#policy-page .card-header {
+  text-shadow: 1px 2px 2px #000;
+  height: 50px;
 }
 label {
   font-size: 1.6rem !important;
