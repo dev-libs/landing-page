@@ -1,8 +1,4 @@
-function bugReport() {}
-
 mdc.autoInit();
-
-console.log(mdc);
 
 document.querySelectorAll('.mdc-ripple').forEach(element => mdc.ripple.MDCRipple.attachTo(element));
 document.querySelectorAll('.mdc-text-field').forEach(element => mdc.textField.MDCTextField.attachTo(element));
