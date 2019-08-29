@@ -68,3 +68,9 @@ Not yet.
 ## Prototype Key Feature(s)
 
 - This is the “bread and butter” of the app, this is what makes your app yours.Calculate how long it takes to implement these features and triple the time estimated. That way you’ll have plenty of time to finish. It is preferred to drop features and spend more time working on your MVP features if needed.
+
+## Want to contribute?
+
+1. Fork the master branch to yoru own branch.
+2. Create pull request.
+3. Ask a maintainer to review your changes and deploy with ./deploy.sh
