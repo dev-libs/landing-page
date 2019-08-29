@@ -5,6 +5,7 @@ cp -r ./fonts ./dist/
 cp -r ./images ./dist/
 cp -r ./scripts ./dist/
 cp -r ./videos ./dist/
+cp ./favicon.png ./dist/
 cp ./README.md ./dist/
 git add -A
 git commit -m "Deploy to netlify"
